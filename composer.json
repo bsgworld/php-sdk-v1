@@ -16,7 +16,7 @@
         {
             "name": "BSG World",
             "email": "support@bsg.world",
-            "homepage": "bsg.world"
+            "homepage": "https://bsg.world"
         }
     ],
     "require": {
