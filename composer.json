@@ -1,5 +1,5 @@
 {
-    "name": "bsg/php-api-sdk-v1",
+    "name": "bsg/php-sdk-v1",
     "description": "Comprehensive API for sending SMS, Viber messages, HLR/MNP requests and service management",
     "keywords": [
         "openapitools",
