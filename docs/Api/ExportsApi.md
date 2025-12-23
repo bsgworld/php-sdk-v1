@@ -40,7 +40,7 @@ $apiInstance = new BSG\Api\V1\Api\ExportsApi(
     new GuzzleHttp\Client(),
     $config
 );
-| $id = export_123.csv; // string | Export file ID or filename |
+$id = export_123.csv; // string | Export file ID or filename
 
 try {
     $result = $apiInstance->exportsDeleteFile($id);
@@ -102,8 +102,8 @@ $apiInstance = new BSG\Api\V1\Api\ExportsApi(
     new GuzzleHttp\Client(),
     $config
 );
-| $id = export_123.csv; // string | Export file ID or filename |
-| $format = csv; // string | File format for download (json, xml, csv) |
+$id = export_123.csv; // string | Export file ID or filename
+$format = csv; // string | File format for download (json, xml, csv)
 
 try {
     $result = $apiInstance->exportsGetFile($id, $format);

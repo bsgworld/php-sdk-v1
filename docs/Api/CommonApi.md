@@ -279,10 +279,10 @@ $apiInstance = new BSG\Api\V1\Api\CommonApi(
     new GuzzleHttp\Client(),
     $config
 );
-| $mcc = 255; // string | Mobile Country Code |
-| $mnc = 01; // string | Mobile Network Code |
-| $product = sms; // string | Service type |
-| $tariff_code = 9; // string | Tariff code |
+$mcc = 255; // string | Mobile Country Code
+$mnc = 01; // string | Mobile Network Code
+$product = sms; // string | Service type
+$tariff_code = 9; // string | Tariff code
 
 try {
     $result = $apiInstance->commonGetPrice($mcc, $mnc, $product, $tariff_code);

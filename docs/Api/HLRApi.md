@@ -468,7 +468,7 @@ $apiInstance = new BSG\Api\V1\Api\HLRApi(
     new GuzzleHttp\Client(),
     $config
 );
-| $reference = unique_ref_123; // string | External reference ID |
+$reference = unique_ref_123; // string | External reference ID
 
 try {
     $result = $apiInstance->hlrGetStatusByExtId($reference);

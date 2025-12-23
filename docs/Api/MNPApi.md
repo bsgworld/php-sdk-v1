@@ -223,7 +223,7 @@ $apiInstance = new BSG\Api\V1\Api\MNPApi(
     new GuzzleHttp\Client(),
     $config
 );
-| $reference = unique_ref_123; // string | External reference ID |
+$reference = unique_ref_123; // string | External reference ID
 
 try {
     $result = $apiInstance->mnpGetStatusByExtId($reference);
@@ -285,7 +285,7 @@ $apiInstance = new BSG\Api\V1\Api\MNPApi(
     new GuzzleHttp\Client(),
     $config
 );
-| $id = 123456; // string | Internal record ID from api_external_ids table |
+$id = 123456; // string | Internal record ID from api_external_ids table
 
 try {
     $result = $apiInstance->mnpGetStatusById($id);

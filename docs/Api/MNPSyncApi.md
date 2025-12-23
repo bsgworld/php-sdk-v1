@@ -38,9 +38,9 @@ $apiInstance = new BSG\Api\V1\Api\MNPSyncApi(
     new GuzzleHttp\Client(),
     $config
 );
-| $msisdn = 380953227271; // string | Phone number in international format (alternative to JSON body) |
-| $tariff = 5; // int | Tariff code (optional, uses default if not provided) |
-| $mnp_create_request = new \BSG\Api\V1\Model\MnpCreateRequest(); // \BSG\Api\V1\Model\MnpCreateRequest | JSON payload for batch requests or alternative to query parameters |
+$msisdn = 380953227271; // string | Phone number in international format (alternative to JSON body)
+$tariff = 5; // int | Tariff code (optional, uses default if not provided)
+$mnp_create_request = new \BSG\Api\V1\Model\MnpCreateRequest(); // \BSG\Api\V1\Model\MnpCreateRequest | JSON payload for batch requests or alternative to query parameters
 
 try {
     $result = $apiInstance->mnpSyncCreateObjects($msisdn, $tariff, $mnp_create_request);
@@ -104,9 +104,9 @@ $apiInstance = new BSG\Api\V1\Api\MNPSyncApi(
     new GuzzleHttp\Client(),
     $config
 );
-| $msisdn = 380953227271; // string | Phone number in international format (alternative to JSON body) |
-| $tariff = 5; // int | Tariff code (optional, uses default if not provided) |
-| $mnp_create_request = new \BSG\Api\V1\Model\MnpCreateRequest(); // \BSG\Api\V1\Model\MnpCreateRequest | JSON payload for batch requests or alternative to query parameters |
+$msisdn = 380953227271; // string | Phone number in international format (alternative to JSON body)
+$tariff = 5; // int | Tariff code (optional, uses default if not provided)
+$mnp_create_request = new \BSG\Api\V1\Model\MnpCreateRequest(); // \BSG\Api\V1\Model\MnpCreateRequest | JSON payload for batch requests or alternative to query parameters
 
 try {
     $result = $apiInstance->mnpSyncCreateObjectsPut($msisdn, $tariff, $mnp_create_request);

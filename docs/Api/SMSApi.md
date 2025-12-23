@@ -653,7 +653,7 @@ $apiInstance = new BSG\Api\V1\Api\SMSApi(
     new GuzzleHttp\Client(),
     $config
 );
-| $reference = unique_ref_123; // string | External reference ID |
+$reference = unique_ref_123; // string | External reference ID
 
 try {
     $result = $apiInstance->smsGetStatusByExtId($reference);
@@ -715,7 +715,7 @@ $apiInstance = new BSG\Api\V1\Api\SMSApi(
     new GuzzleHttp\Client(),
     $config
 );
-| $id = 123456; // string | Message ID |
+$id = 123456; // string | Message ID
 
 try {
     $result = $apiInstance->smsGetStatusById($id);
@@ -777,7 +777,7 @@ $apiInstance = new BSG\Api\V1\Api\SMSApi(
     new GuzzleHttp\Client(),
     $config
 );
-| $task_id = 123; // string | Task ID |
+$task_id = 123; // string | Task ID
 
 try {
     $result = $apiInstance->smsGetTaskStatus($task_id);

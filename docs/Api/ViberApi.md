@@ -468,7 +468,7 @@ $apiInstance = new BSG\Api\V1\Api\ViberApi(
     new GuzzleHttp\Client(),
     $config
 );
-| $reference = unique_ref_123; // string | External reference ID |
+$reference = unique_ref_123; // string | External reference ID
 
 try {
     $result = $apiInstance->viberGetStatusByExtId($reference);
