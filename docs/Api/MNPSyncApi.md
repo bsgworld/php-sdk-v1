@@ -38,7 +38,7 @@ $apiInstance = new BSG\Api\V1\Api\MNPSyncApi(
     new GuzzleHttp\Client(),
     $config
 );
-$msisdn = 380953227271; // string | Phone number in international format (alternative to JSON body)
+$msisdn = '380953227271'; //  string | Phone number in international format (alternative to JSON body)
 $tariff = 5; // int | Tariff code (optional, uses default if not provided)
 $mnp_create_request = new \BSG\Api\V1\Model\MnpCreateRequest(); // \BSG\Api\V1\Model\MnpCreateRequest | JSON payload for batch requests or alternative to query parameters
 
@@ -52,11 +52,12 @@ try {
 
 ### Parameters
 
+
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **msisdn** | **string**| Phone number in international format (alternative to JSON body) | [optional] |
-| **tariff** | **int**| Tariff code (optional, uses default if not provided) | [optional] |
-| **mnp_create_request** | [**\BSG\Api\V1\Model\MnpCreateRequest**](../Model/MnpCreateRequest.md)| JSON payload for batch requests or alternative to query parameters | [optional] |
+| **msisdn** | **string** | Phone number in international format (alternative to JSON body) | [optional] |
+| **tariff** | **int** | Tariff code (optional, uses default if not provided) | [optional] |
+| **mnp_create_request** | [**\BSG\Api\V1\Model\MnpCreateRequest**](../Model/MnpCreateRequest.md) | JSON payload for batch requests or alternative to query parameters | [optional] |
 
 ### Return type
 
@@ -104,7 +105,7 @@ $apiInstance = new BSG\Api\V1\Api\MNPSyncApi(
     new GuzzleHttp\Client(),
     $config
 );
-$msisdn = 380953227271; // string | Phone number in international format (alternative to JSON body)
+$msisdn = '380953227271'; //  string | Phone number in international format (alternative to JSON body)
 $tariff = 5; // int | Tariff code (optional, uses default if not provided)
 $mnp_create_request = new \BSG\Api\V1\Model\MnpCreateRequest(); // \BSG\Api\V1\Model\MnpCreateRequest | JSON payload for batch requests or alternative to query parameters
 
@@ -118,11 +119,12 @@ try {
 
 ### Parameters
 
+
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **msisdn** | **string**| Phone number in international format (alternative to JSON body) | [optional] |
-| **tariff** | **int**| Tariff code (optional, uses default if not provided) | [optional] |
-| **mnp_create_request** | [**\BSG\Api\V1\Model\MnpCreateRequest**](../Model/MnpCreateRequest.md)| JSON payload for batch requests or alternative to query parameters | [optional] |
+| **msisdn** | **string** | Phone number in international format (alternative to JSON body) | [optional] |
+| **tariff** | **int** | Tariff code (optional, uses default if not provided) | [optional] |
+| **mnp_create_request** | [**\BSG\Api\V1\Model\MnpCreateRequest**](../Model/MnpCreateRequest.md) | JSON payload for batch requests or alternative to query parameters | [optional] |
 
 ### Return type
 

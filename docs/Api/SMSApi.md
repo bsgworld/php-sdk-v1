@@ -48,8 +48,13 @@ $apiInstance = new BSG\Api\V1\Api\SMSApi(
     new GuzzleHttp\Client(),
     $config
 );
-$sms_price_check_request = {"destination":"phone","msisdn":"380953227271","originator":"BSG","body":"Hello! This is a test message for price calculation.","transliterate":true}; // \BSG\Api\V1\Model\SmsPriceCheckRequest
-
+$sms_price_check_request = new \BSG\Api\V1\Model\SmsPriceCheckRequest([
+    'destination' => 'phone',
+    'msisdn' => '380953227271',
+    'originator' => 'BSG',
+    'body' => 'Hello! This is a test message for price calculation.',
+    'transliterate' => true,
+]);
 try {
     $result = $apiInstance->smsCheckPrice($sms_price_check_request);
     print_r($result);
@@ -60,9 +65,10 @@ try {
 
 ### Parameters
 
+
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **sms_price_check_request** | [**\BSG\Api\V1\Model\SmsPriceCheckRequest**](../Model/SmsPriceCheckRequest.md)|  | |
+| **sms_price_check_request** | [**\BSG\Api\V1\Model\SmsPriceCheckRequest**](../Model/SmsPriceCheckRequest.md) |  | |
 
 ### Return type
 
@@ -110,8 +116,13 @@ $apiInstance = new BSG\Api\V1\Api\SMSApi(
     new GuzzleHttp\Client(),
     $config
 );
-$sms_price_check_request = {"destination":"phone","msisdn":"380953227271","originator":"BSG","body":"Hello! This is a test message for price calculation.","transliterate":true}; // \BSG\Api\V1\Model\SmsPriceCheckRequest
-
+$sms_price_check_request = new \BSG\Api\V1\Model\SmsPriceCheckRequest([
+    'destination' => 'phone',
+    'msisdn' => '380953227271',
+    'originator' => 'BSG',
+    'body' => 'Hello! This is a test message for price calculation.',
+    'transliterate' => true,
+]);
 try {
     $result = $apiInstance->smsCheckPricePut($sms_price_check_request);
     print_r($result);
@@ -122,9 +133,10 @@ try {
 
 ### Parameters
 
+
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **sms_price_check_request** | [**\BSG\Api\V1\Model\SmsPriceCheckRequest**](../Model/SmsPriceCheckRequest.md)|  | |
+| **sms_price_check_request** | [**\BSG\Api\V1\Model\SmsPriceCheckRequest**](../Model/SmsPriceCheckRequest.md) |  | |
 
 ### Return type
 
@@ -172,8 +184,17 @@ $apiInstance = new BSG\Api\V1\Api\SMSApi(
     new GuzzleHttp\Client(),
     $config
 );
-$sms_create_request = {"destination":"phone","msisdn":"380953227271","originator":"testsms","body":"k TEST Hello12 SMS 1115222","reference":"1737033400123","validity":72,"callback_url":"https://webhook.site/wh-delivery-reports","2way":0,"transliterate":false}; // \BSG\Api\V1\Model\SmsCreateRequest
-
+$sms_create_request = new \BSG\Api\V1\Model\SmsCreateRequest([
+    'destination' => 'phone',
+    'msisdn' => '380953227271',
+    'originator' => 'testsms',
+    'body' => 'k TEST Hello12 SMS 1115222',
+    'reference' => '1737033400123',
+    'validity' => 72,
+    'callback_url' => 'https://webhook.site/wh-delivery-reports',
+    '2way' => 0,
+    'transliterate' => false,
+]);
 try {
     $result = $apiInstance->smsCreateObjects($sms_create_request);
     print_r($result);
@@ -184,9 +205,10 @@ try {
 
 ### Parameters
 
+
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **sms_create_request** | [**\BSG\Api\V1\Model\SmsCreateRequest**](../Model/SmsCreateRequest.md)|  | |
+| **sms_create_request** | [**\BSG\Api\V1\Model\SmsCreateRequest**](../Model/SmsCreateRequest.md) |  | |
 
 ### Return type
 
@@ -234,8 +256,17 @@ $apiInstance = new BSG\Api\V1\Api\SMSApi(
     new GuzzleHttp\Client(),
     $config
 );
-$sms_create_request = {"destination":"phone","msisdn":"380953227271","originator":"testsms","body":"k TEST Hello12 SMS 1115222","reference":"1737033400123","validity":72,"callback_url":"https://webhook.site/wh-delivery-reports","2way":0,"transliterate":false}; // \BSG\Api\V1\Model\SmsCreateRequest
-
+$sms_create_request = new \BSG\Api\V1\Model\SmsCreateRequest([
+    'destination' => 'phone',
+    'msisdn' => '380953227271',
+    'originator' => 'testsms',
+    'body' => 'k TEST Hello12 SMS 1115222',
+    'reference' => '1737033400123',
+    'validity' => 72,
+    'callback_url' => 'https://webhook.site/wh-delivery-reports',
+    '2way' => 0,
+    'transliterate' => false,
+]);
 try {
     $result = $apiInstance->smsCreateObjectsPut($sms_create_request);
     print_r($result);
@@ -246,9 +277,10 @@ try {
 
 ### Parameters
 
+
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **sms_create_request** | [**\BSG\Api\V1\Model\SmsCreateRequest**](../Model/SmsCreateRequest.md)|  | |
+| **sms_create_request** | [**\BSG\Api\V1\Model\SmsCreateRequest**](../Model/SmsCreateRequest.md) |  | |
 
 ### Return type
 
@@ -532,8 +564,13 @@ $apiInstance = new BSG\Api\V1\Api\SMSApi(
     new GuzzleHttp\Client(),
     $config
 );
-$sms_mass_status_request = {"ids":[123,124,125]}; // \BSG\Api\V1\Model\SmsMassStatusRequest
-
+$sms_mass_status_request = new \BSG\Api\V1\Model\SmsMassStatusRequest([
+    'ids' => [
+        0 => 123,
+        1 => 124,
+        2 => 125,
+    ],
+]);
 try {
     $result = $apiInstance->smsGetMassStatus($sms_mass_status_request);
     print_r($result);
@@ -544,9 +581,10 @@ try {
 
 ### Parameters
 
+
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **sms_mass_status_request** | [**\BSG\Api\V1\Model\SmsMassStatusRequest**](../Model/SmsMassStatusRequest.md)|  | |
+| **sms_mass_status_request** | [**\BSG\Api\V1\Model\SmsMassStatusRequest**](../Model/SmsMassStatusRequest.md) |  | |
 
 ### Return type
 
@@ -653,7 +691,7 @@ $apiInstance = new BSG\Api\V1\Api\SMSApi(
     new GuzzleHttp\Client(),
     $config
 );
-$reference = unique_ref_123; // string | External reference ID
+$reference = 'unique_ref_123'; //  string | External reference ID
 
 try {
     $result = $apiInstance->smsGetStatusByExtId($reference);
@@ -665,9 +703,10 @@ try {
 
 ### Parameters
 
+
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **reference** | **string**| External reference ID | |
+| **reference** | **string** | External reference ID | |
 
 ### Return type
 
@@ -715,7 +754,7 @@ $apiInstance = new BSG\Api\V1\Api\SMSApi(
     new GuzzleHttp\Client(),
     $config
 );
-$id = 123456; // string | Message ID
+$id = '123456'; //  string | Message ID
 
 try {
     $result = $apiInstance->smsGetStatusById($id);
@@ -727,9 +766,10 @@ try {
 
 ### Parameters
 
+
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **id** | **string**| Message ID | |
+| **id** | **string** | Message ID | |
 
 ### Return type
 
@@ -777,7 +817,7 @@ $apiInstance = new BSG\Api\V1\Api\SMSApi(
     new GuzzleHttp\Client(),
     $config
 );
-$task_id = 123; // string | Task ID
+$task_id = '123'; //  string | Task ID
 
 try {
     $result = $apiInstance->smsGetTaskStatus($task_id);
@@ -789,9 +829,10 @@ try {
 
 ### Parameters
 
+
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **task_id** | **string**| Task ID | |
+| **task_id** | **string** | Task ID | |
 
 ### Return type
 

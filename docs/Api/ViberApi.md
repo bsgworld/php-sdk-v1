@@ -43,8 +43,16 @@ $apiInstance = new BSG\Api\V1\Api\ViberApi(
     new GuzzleHttp\Client(),
     $config
 );
-$viber_price_check_request = {"to":[{"msisdn":"380953227271"}],"message":"Hello from Viber! This is a price check test.","originator":"BSG","validity":72}; // \BSG\Api\V1\Model\ViberPriceCheckRequest
-
+$viber_price_check_request = new \BSG\Api\V1\Model\ViberPriceCheckRequest([
+    'to' => [
+        0 => [
+            'msisdn' => '380953227271',
+        ],
+    ],
+    'message' => 'Hello from Viber! This is a price check test.',
+    'originator' => 'BSG',
+    'validity' => 72,
+]);
 try {
     $result = $apiInstance->viberCheckPrice($viber_price_check_request);
     print_r($result);
@@ -55,9 +63,10 @@ try {
 
 ### Parameters
 
+
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **viber_price_check_request** | [**\BSG\Api\V1\Model\ViberPriceCheckRequest**](../Model/ViberPriceCheckRequest.md)|  | |
+| **viber_price_check_request** | [**\BSG\Api\V1\Model\ViberPriceCheckRequest**](../Model/ViberPriceCheckRequest.md) |  | |
 
 ### Return type
 
@@ -105,8 +114,16 @@ $apiInstance = new BSG\Api\V1\Api\ViberApi(
     new GuzzleHttp\Client(),
     $config
 );
-$viber_price_check_request = {"to":[{"msisdn":"380953227271"}],"message":"Hello from Viber! This is a price check test.","originator":"BSG","validity":72}; // \BSG\Api\V1\Model\ViberPriceCheckRequest
-
+$viber_price_check_request = new \BSG\Api\V1\Model\ViberPriceCheckRequest([
+    'to' => [
+        0 => [
+            'msisdn' => '380953227271',
+        ],
+    ],
+    'message' => 'Hello from Viber! This is a price check test.',
+    'originator' => 'BSG',
+    'validity' => 72,
+]);
 try {
     $result = $apiInstance->viberCheckPricePut($viber_price_check_request);
     print_r($result);
@@ -117,9 +134,10 @@ try {
 
 ### Parameters
 
+
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **viber_price_check_request** | [**\BSG\Api\V1\Model\ViberPriceCheckRequest**](../Model/ViberPriceCheckRequest.md)|  | |
+| **viber_price_check_request** | [**\BSG\Api\V1\Model\ViberPriceCheckRequest**](../Model/ViberPriceCheckRequest.md) |  | |
 
 ### Return type
 
@@ -167,8 +185,21 @@ $apiInstance = new BSG\Api\V1\Api\ViberApi(
     new GuzzleHttp\Client(),
     $config
 );
-$viber_create_request = {"to":[{"msisdn":"380953227271","reference":"viber_text_001"}],"message":"Hello from Viber! This is a test message.","originator":"BSG","callback_url":"https://webhook.site/viber-callback","validity":72,"resend_on_undelivery":false,"sms_text":"Hello from BSG! This is SMS fallback.","sms_originator":"BSG"}; // \BSG\Api\V1\Model\ViberCreateRequest
-
+$viber_create_request = new \BSG\Api\V1\Model\ViberCreateRequest([
+    'to' => [
+        0 => [
+            'msisdn' => '380953227271',
+            'reference' => 'viber_text_001',
+        ],
+    ],
+    'message' => 'Hello from Viber! This is a test message.',
+    'originator' => 'BSG',
+    'callback_url' => 'https://webhook.site/viber-callback',
+    'validity' => 72,
+    'resend_on_undelivery' => false,
+    'sms_text' => 'Hello from BSG! This is SMS fallback.',
+    'sms_originator' => 'BSG',
+]);
 try {
     $result = $apiInstance->viberCreateObjects($viber_create_request);
     print_r($result);
@@ -179,9 +210,10 @@ try {
 
 ### Parameters
 
+
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **viber_create_request** | [**\BSG\Api\V1\Model\ViberCreateRequest**](../Model/ViberCreateRequest.md)|  | |
+| **viber_create_request** | [**\BSG\Api\V1\Model\ViberCreateRequest**](../Model/ViberCreateRequest.md) |  | |
 
 ### Return type
 
@@ -229,8 +261,21 @@ $apiInstance = new BSG\Api\V1\Api\ViberApi(
     new GuzzleHttp\Client(),
     $config
 );
-$viber_create_request = {"to":[{"msisdn":"380953227271","reference":"viber_text_001"}],"message":"Hello from Viber! This is a test message.","originator":"BSG","callback_url":"https://webhook.site/viber-callback","validity":72,"resend_on_undelivery":false,"sms_text":"Hello from BSG! This is SMS fallback.","sms_originator":"BSG"}; // \BSG\Api\V1\Model\ViberCreateRequest
-
+$viber_create_request = new \BSG\Api\V1\Model\ViberCreateRequest([
+    'to' => [
+        0 => [
+            'msisdn' => '380953227271',
+            'reference' => 'viber_text_001',
+        ],
+    ],
+    'message' => 'Hello from Viber! This is a test message.',
+    'originator' => 'BSG',
+    'callback_url' => 'https://webhook.site/viber-callback',
+    'validity' => 72,
+    'resend_on_undelivery' => false,
+    'sms_text' => 'Hello from BSG! This is SMS fallback.',
+    'sms_originator' => 'BSG',
+]);
 try {
     $result = $apiInstance->viberCreateObjectsPut($viber_create_request);
     print_r($result);
@@ -241,9 +286,10 @@ try {
 
 ### Parameters
 
+
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **viber_create_request** | [**\BSG\Api\V1\Model\ViberCreateRequest**](../Model/ViberCreateRequest.md)|  | |
+| **viber_create_request** | [**\BSG\Api\V1\Model\ViberCreateRequest**](../Model/ViberCreateRequest.md) |  | |
 
 ### Return type
 
@@ -468,7 +514,7 @@ $apiInstance = new BSG\Api\V1\Api\ViberApi(
     new GuzzleHttp\Client(),
     $config
 );
-$reference = unique_ref_123; // string | External reference ID
+$reference = 'unique_ref_123'; //  string | External reference ID
 
 try {
     $result = $apiInstance->viberGetStatusByExtId($reference);
@@ -480,9 +526,10 @@ try {
 
 ### Parameters
 
+
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **reference** | **string**| External reference ID | |
+| **reference** | **string** | External reference ID | |
 
 ### Return type
 

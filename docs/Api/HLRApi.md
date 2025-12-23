@@ -55,9 +55,10 @@ try {
 
 ### Parameters
 
+
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **hlr_create_request** | [**\BSG\Api\V1\Model\HlrCreateRequest**](../Model/HlrCreateRequest.md)|  | |
+| **hlr_create_request** | [**\BSG\Api\V1\Model\HlrCreateRequest**](../Model/HlrCreateRequest.md) |  | |
 
 ### Return type
 
@@ -117,9 +118,10 @@ try {
 
 ### Parameters
 
+
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **hlr_create_request** | [**\BSG\Api\V1\Model\HlrCreateRequest**](../Model/HlrCreateRequest.md)|  | |
+| **hlr_create_request** | [**\BSG\Api\V1\Model\HlrCreateRequest**](../Model/HlrCreateRequest.md) |  | |
 
 ### Return type
 
@@ -179,9 +181,10 @@ try {
 
 ### Parameters
 
+
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **hlr_sync_request** | [**\BSG\Api\V1\Model\HlrSyncRequest**](../Model/HlrSyncRequest.md)|  | |
+| **hlr_sync_request** | [**\BSG\Api\V1\Model\HlrSyncRequest**](../Model/HlrSyncRequest.md) |  | |
 
 ### Return type
 
@@ -241,9 +244,10 @@ try {
 
 ### Parameters
 
+
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **hlr_sync_request** | [**\BSG\Api\V1\Model\HlrSyncRequest**](../Model/HlrSyncRequest.md)|  | |
+| **hlr_sync_request** | [**\BSG\Api\V1\Model\HlrSyncRequest**](../Model/HlrSyncRequest.md) |  | |
 
 ### Return type
 
@@ -468,7 +472,7 @@ $apiInstance = new BSG\Api\V1\Api\HLRApi(
     new GuzzleHttp\Client(),
     $config
 );
-$reference = unique_ref_123; // string | External reference ID
+$reference = 'unique_ref_123'; //  string | External reference ID
 
 try {
     $result = $apiInstance->hlrGetStatusByExtId($reference);
@@ -480,9 +484,10 @@ try {
 
 ### Parameters
 
+
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **reference** | **string**| External reference ID | |
+| **reference** | **string** | External reference ID | |
 
 ### Return type
 

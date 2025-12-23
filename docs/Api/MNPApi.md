@@ -40,8 +40,21 @@ $apiInstance = new BSG\Api\V1\Api\MNPApi(
     new GuzzleHttp\Client(),
     $config
 );
-$mnp_batch_create_request = {"msisdns":[{"msisdn":"380953227271","tariff":5,"reference":"mnp_ref_001"},{"msisdn":"380953227272","tariff":5,"reference":"mnp_ref_002"}],"reference":"batch_mnp_123"}; // \BSG\Api\V1\Model\MnpBatchCreateRequest
-
+$mnp_batch_create_request = new \BSG\Api\V1\Model\MnpBatchCreateRequest([
+    'msisdns' => [
+        0 => [
+            'msisdn' => '380953227271',
+            'tariff' => 5,
+            'reference' => 'mnp_ref_001',
+        ],
+        1 => [
+            'msisdn' => '380953227272',
+            'tariff' => 5,
+            'reference' => 'mnp_ref_002',
+        ],
+    ],
+    'reference' => 'batch_mnp_123',
+]);
 try {
     $result = $apiInstance->mnpCreateBatchMnp($mnp_batch_create_request);
     print_r($result);
@@ -52,9 +65,10 @@ try {
 
 ### Parameters
 
+
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **mnp_batch_create_request** | [**\BSG\Api\V1\Model\MnpBatchCreateRequest**](../Model/MnpBatchCreateRequest.md)|  | |
+| **mnp_batch_create_request** | [**\BSG\Api\V1\Model\MnpBatchCreateRequest**](../Model/MnpBatchCreateRequest.md) |  | |
 
 ### Return type
 
@@ -114,9 +128,10 @@ try {
 
 ### Parameters
 
+
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **mnp_create_request** | [**\BSG\Api\V1\Model\MnpCreateRequest**](../Model/MnpCreateRequest.md)|  | |
+| **mnp_create_request** | [**\BSG\Api\V1\Model\MnpCreateRequest**](../Model/MnpCreateRequest.md) |  | |
 
 ### Return type
 
@@ -223,7 +238,7 @@ $apiInstance = new BSG\Api\V1\Api\MNPApi(
     new GuzzleHttp\Client(),
     $config
 );
-$reference = unique_ref_123; // string | External reference ID
+$reference = 'unique_ref_123'; //  string | External reference ID
 
 try {
     $result = $apiInstance->mnpGetStatusByExtId($reference);
@@ -235,9 +250,10 @@ try {
 
 ### Parameters
 
+
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **reference** | **string**| External reference ID | |
+| **reference** | **string** | External reference ID | |
 
 ### Return type
 
@@ -285,7 +301,7 @@ $apiInstance = new BSG\Api\V1\Api\MNPApi(
     new GuzzleHttp\Client(),
     $config
 );
-$id = 123456; // string | Internal record ID from api_external_ids table
+$id = '123456'; //  string | Internal record ID from api_external_ids table
 
 try {
     $result = $apiInstance->mnpGetStatusById($id);
@@ -297,9 +313,10 @@ try {
 
 ### Parameters
 
+
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **id** | **string**| Internal record ID from api_external_ids table | |
+| **id** | **string** | Internal record ID from api_external_ids table | |
 
 ### Return type
 

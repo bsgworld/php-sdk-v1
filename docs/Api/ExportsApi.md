@@ -40,7 +40,7 @@ $apiInstance = new BSG\Api\V1\Api\ExportsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$id = export_123.csv; // string | Export file ID or filename
+$id = 'export_123.csv'; //  string | Export file ID or filename
 
 try {
     $result = $apiInstance->exportsDeleteFile($id);
@@ -52,9 +52,10 @@ try {
 
 ### Parameters
 
+
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **id** | **string**| Export file ID or filename | |
+| **id** | **string** | Export file ID or filename | |
 
 ### Return type
 
@@ -102,8 +103,8 @@ $apiInstance = new BSG\Api\V1\Api\ExportsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$id = export_123.csv; // string | Export file ID or filename
-$format = csv; // string | File format for download (json, xml, csv)
+$id = 'export_123.csv'; //  string | Export file ID or filename
+$format = 'csv'; //  string | File format for download (json, xml, csv)
 
 try {
     $result = $apiInstance->exportsGetFile($id, $format);
@@ -115,10 +116,11 @@ try {
 
 ### Parameters
 
+
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **id** | **string**| Export file ID or filename | |
-| **format** | **string**| File format for download (json, xml, csv) | [optional] [default to &#39;json&#39;] |
+| **id** | **string** | Export file ID or filename | |
+| **format** | **string** | File format for download (json, xml, csv) | [optional] [default to &#39;json&#39;] |
 
 ### Return type
 
@@ -237,9 +239,10 @@ try {
 
 ### Parameters
 
+
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **export_create_request** | [**\BSG\Api\V1\Model\ExportCreateRequest**](../Model/ExportCreateRequest.md)|  | |
+| **export_create_request** | [**\BSG\Api\V1\Model\ExportCreateRequest**](../Model/ExportCreateRequest.md) |  | |
 
 ### Return type
 
@@ -299,9 +302,10 @@ try {
 
 ### Parameters
 
+
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **export_create_request** | [**\BSG\Api\V1\Model\ExportCreateRequest**](../Model/ExportCreateRequest.md)|  | |
+| **export_create_request** | [**\BSG\Api\V1\Model\ExportCreateRequest**](../Model/ExportCreateRequest.md) |  | |
 
 ### Return type
 

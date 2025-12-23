@@ -279,10 +279,10 @@ $apiInstance = new BSG\Api\V1\Api\CommonApi(
     new GuzzleHttp\Client(),
     $config
 );
-$mcc = 255; // string | Mobile Country Code
-$mnc = 01; // string | Mobile Network Code
-$product = sms; // string | Service type
-$tariff_code = 9; // string | Tariff code
+$mcc = '255'; //  string | Mobile Country Code
+$mnc = '01'; //  string | Mobile Network Code
+$product = 'sms'; //  string | Service type
+$tariff_code = '9'; //  string | Tariff code
 
 try {
     $result = $apiInstance->commonGetPrice($mcc, $mnc, $product, $tariff_code);
@@ -294,12 +294,13 @@ try {
 
 ### Parameters
 
+
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **mcc** | **string**| Mobile Country Code | [optional] |
-| **mnc** | **string**| Mobile Network Code | [optional] |
-| **product** | **string**| Service type | [optional] |
-| **tariff_code** | **string**| Tariff code | [optional] |
+| **mcc** | **string** | Mobile Country Code | [optional] |
+| **mnc** | **string** | Mobile Network Code | [optional] |
+| **product** | **string** | Service type | [optional] |
+| **tariff_code** | **string** | Tariff code | [optional] |
 
 ### Return type
 
@@ -347,8 +348,12 @@ $apiInstance = new BSG\Api\V1\Api\CommonApi(
     new GuzzleHttp\Client(),
     $config
 );
-$common_price_request = {"mcc":"255","mnc":"01","product":"sms","tariff_code":"9"}; // \BSG\Api\V1\Model\CommonPriceRequest
-
+$common_price_request = new \BSG\Api\V1\Model\CommonPriceRequest([
+    'mcc' => '255',
+    'mnc' => '01',
+    'product' => 'sms',
+    'tariff_code' => '9',
+]);
 try {
     $result = $apiInstance->commonGetPricePost($common_price_request);
     print_r($result);
@@ -359,9 +364,10 @@ try {
 
 ### Parameters
 
+
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **common_price_request** | [**\BSG\Api\V1\Model\CommonPriceRequest**](../Model/CommonPriceRequest.md)|  | |
+| **common_price_request** | [**\BSG\Api\V1\Model\CommonPriceRequest**](../Model/CommonPriceRequest.md) |  | |
 
 ### Return type
 
