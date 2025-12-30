@@ -24,6 +24,73 @@ Please follow the [installation procedure](#installation--usage) and then run th
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure API key authorization: ApiKeyAuth
+$config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
+
+
+$apiInstance = new BSG\Api\V1\Api\SMSApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$sms_price_check_request = new \BSG\Api\V1\Model\SmsPriceCheckRequest([
+    'destination' => 'phone',
+    'msisdn' => '380953227271',
+    'originator' => 'BSG',
+    'body' => 'Hello! This is a test message for price calculation.',
+    'transliterate' => true,
+]);
+try {
+    $result = $apiInstance->smsCheckPrice($sms_price_check_request);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling SMSApi->smsCheckPrice: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **sms_price_check_request** | [**\BSG\Api\V1\Model\SmsPriceCheckRequest**](../Model/SmsPriceCheckRequest.md) |  | |
+
+### Return type
+
+[**\BSG\Api\V1\Model\SmsPriceCheckResponse**](../Model/SmsPriceCheckResponse.md)
+
+### Authorization
+
+[ApiKeyAuth](../../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `smsCheckPricePut()`
+
+```php
+smsCheckPricePut($sms_price_check_request): \BSG\Api\V1\Model\SmsPriceCheckResponse
+```
+
+Check SMS price (PUT)
+
+Calculate SMS price without sending using PUT method
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
 
 // Configure API key authorization: ApiKeyAuth
 $config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
@@ -31,20 +98,97 @@ $config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-
 // $config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
 
-$apiInstance = new BSG\Api\V1\Api\CommonApi(
+$apiInstance = new BSG\Api\V1\Api\SMSApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-
+$sms_price_check_request = new \BSG\Api\V1\Model\SmsPriceCheckRequest([
+    'destination' => 'phone',
+    'msisdn' => '380953227271',
+    'originator' => 'BSG',
+    'body' => 'Hello! This is a test message for price calculation.',
+    'transliterate' => true,
+]);
 try {
-    $result = $apiInstance->commonGetBalanceBase();
+    $result = $apiInstance->smsCheckPricePut($sms_price_check_request);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CommonApi->commonGetBalanceBase: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling SMSApi->smsCheckPricePut: ', $e->getMessage(), PHP_EOL;
 }
+```
 
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **sms_price_check_request** | [**\BSG\Api\V1\Model\SmsPriceCheckRequest**](../Model/SmsPriceCheckRequest.md) |  | |
+
+### Return type
+
+[**\BSG\Api\V1\Model\SmsPriceCheckResponse**](../Model/SmsPriceCheckResponse.md)
+
+### Authorization
+
+[ApiKeyAuth](../../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `smsCreateObjects()`
+
+```php
+smsCreateObjects($sms_create_request): \BSG\Api\V1\Model\SmsCreateResponse
+```
+
+Send SMS message
+
+Send SMS message to one or multiple recipients
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure API key authorization: ApiKeyAuth
+$config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
+
+
+$apiInstance = new BSG\Api\V1\Api\SMSApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$sms_create_request = new \BSG\Api\V1\Model\SmsCreateRequest([
+    'destination' => 'phone',
+    'msisdn' => '380953227271',
+    'originator' => 'testsms',
+    'body' => 'k TEST Hello12 SMS 1115222',
+    'reference' => '1737033400123',
+    'validity' => 72,
+    'callback_url' => 'https://webhook.site/wh-delivery-reports',
+    '2way' => 0,
+    'transliterate' => false,
+]);
+try {
+    $result = $apiInstance->smsCreateObjects($sms_create_request);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling SMSApi->smsCreateObjects: ', $e->getMessage(), PHP_EOL;
+}
 ```
 
 ## Endpoints
