@@ -1,6 +1,6 @@
 # BSG\Api\V1\SMSApi
 
-All URIs are relative to https://api.sms-service.local, except if the operation defines another base path.
+All URIs are relative to https://api.bsg.world, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |

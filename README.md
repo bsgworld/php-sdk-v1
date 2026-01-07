@@ -193,7 +193,7 @@ try {
 
 ## Endpoints
 
-All URIs are relative to *https://api.sms-service.local*
+All URIs are relative to *https://api.bsg.world*
 
 | Class | Method | HTTP request | Description |
 | ------------ | ------------- | ------------- | ------------- |
